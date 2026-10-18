@@ -1,0 +1,17 @@
+{
+ "date": "2026-10-18T20:26:26.652Z",
+ "node": "v24.18.0",
+ "cues": 1200,
+ "parse_ms": {
+  "p50": 1.08,
+  "p95": 1.55
+ },
+ "lookup_us": {
+  "p50": 0.3,
+  "p95": 1.7,
+  "runs": 20000
+ },
+ "extension_kb": 78.9,
+ "extension_files": 10,
+ "tray_exe_kb": 10.5
+}

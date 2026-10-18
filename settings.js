@@ -1,0 +1,10 @@
+'use strict';
+const byId = id => document.getElementById(id);
+async function ask(type, payload = {}) { const result = await chrome.runtime.sendMessage({ type, ...payload }); if (!result?.ok) throw new Error(result?.error || 'İşlem tamamlanamadı.'); return result; }
+async function refreshConnection() { try { const result = await ask('APP_STATE'); byId('connection').textContent = result.connected ? (result.enabled ? 'Frame açık · YouTube araçları hazır' : 'Frame açık · YouTube araçları kapalı') : 'Frame masaüstü uygulaması kapalı'; } catch (error) { byId('connection').textContent = error.message; } }
+async function localPermission() { const permitted = await chrome.permissions.request({ origins: ['http://127.0.0.1:11434/*'] }); if (!permitted) throw new Error('Yerel modele bağlantı izni verilmedi.'); }
+byId('list-models').onclick = async () => { try { await localPermission(); const result = await ask('LIST_MODELS'); byId('models').textContent = result.models.length ? 'Kurulu modeller: ' + result.models.join(' · ') : 'Ollama yanıt verdi, kurulu model bulunamadı.'; if (result.models.length === 1) byId('model').value = result.models[0]; } catch (error) { byId('settings-status').textContent = 'Model listelenemedi: ' + error.message; } };
+byId('save-settings').onclick = async () => { try { if (!byId('model').value.trim()) throw new Error('Kurulu model adını gir.'); await localPermission(); await ask('SET_SETTINGS', { model: byId('model').value }); byId('settings-status').textContent = 'Model adı kaydedildi. YouTube panelinden bir cümle üzerinde deneyebilirsin.'; } catch (error) { byId('settings-status').textContent = error.message; } };
+byId('disconnect').onclick = async () => { try { await ask('SET_SETTINGS', { model: '' }); byId('model').value = ''; byId('settings-status').textContent = 'AI çağrıları kapatıldı.'; } catch (error) { byId('settings-status').textContent = error.message; } };
+ask('GET_SETTINGS').then(result => { byId('model').value = result.settings.model || ''; }).catch(error => { byId('settings-status').textContent = error.message; });
+refreshConnection(); setInterval(refreshConnection, 3000);

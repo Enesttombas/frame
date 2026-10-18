@@ -1,0 +1,12 @@
+const assert = require('node:assert/strict');
+const prefs = require('./preferences.js');
+assert.deepEqual(prefs.normalize(null), prefs.defaults);
+assert.deepEqual(prefs.normalize([]), prefs.defaults);
+const clean = prefs.normalize({ display: '<script>', englishSize: Infinity, turkishSize: -5, bottom: 500, delay: -10, opacity: 101, speed: '2', autoPause: true, hoverPause: 'true', model: 'injected' });
+assert.equal(clean.display, 'dual'); assert.equal(clean.englishSize, 26); assert.equal(clean.turkishSize, 12); assert.equal(clean.bottom, 180); assert.equal(clean.delay, -5); assert.equal(clean.opacity, 100); assert.equal(clean.speed, 1); assert.equal(clean.autoPause, true); assert.equal(clean.hoverPause, false); assert.equal(clean.model, undefined);
+assert.equal(prefs.normalize({ delay: 1.234 }).delay, 1.23);
+const en = [{ start: 3661.125, end: 3663.999, text: 'Hello world.' }], tr = [{ start: 3660, end: 3664, text: 'Merhaba dünya.' }];
+assert.equal(prefs.srt(en, tr, true), '1\n01:01:01,125 --> 01:01:03,999\nHello world.\nMerhaba dünya.\n');
+assert.ok(!prefs.srt(en, tr).includes('Merhaba'));
+assert.equal(prefs.srt([]), '');
+console.log('PASS: preference type/range guards, unknown key isolation, defaults, bilingual SRT timestamp and Unicode export.');

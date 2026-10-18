@@ -1,0 +1,1 @@
+window.FRAME_TIMINGS = [{"start": 0.0, "end": 4.349}, {"start": 4.349, "end": 9.208}, {"start": 9.208, "end": 14.772}, {"start": 14.772, "end": 20.176}, {"start": 20.176, "end": 25.245}, {"start": 25.245, "end": 29.329}, {"start": 29.329, "end": 33.743}, {"start": 33.743, "end": 39.591}];

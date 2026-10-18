@@ -1,0 +1,157 @@
+{
+ "surum": 1,
+ "varliklar": [
+  {
+   "dosya": "hero.gif",
+   "tur": "gif",
+   "kaynaklar": [
+    {
+     "dosya": ".vitrin/hf/hero/index.html",
+     "sha256": "a2d9115afab10f2f41da16c0cb18836443c727a0513a530801c71cae6d1abe83"
+    },
+    {
+     "dosya": "youtube.js",
+     "sha256": "2b17532575aaa289d6e2cf07726c686bfd2aea2ac698bdd13e04d013b91146ba"
+    },
+    {
+     "dosya": "player-panel.js",
+     "sha256": "2cbafbba5943abacaf9fb19528a71ae589c95ee958592d5fbf3008fbb770b796"
+    }
+   ],
+   "komut": "npx hyperframes@0.8.171 render + bash gif.sh",
+   "tarih": "2026-10-19",
+   "boyut": 3214629
+  },
+  {
+   "dosya": "dual-captions.gif",
+   "tur": "gif",
+   "kaynaklar": [
+    {
+     "dosya": ".vitrin/hf/dual-captions/index.html",
+     "sha256": "060921bc11c2879fe016dd9494b64c3a8638d01e93811d36f9e24c198e5c0364"
+    },
+    {
+     "dosya": "captions.js",
+     "sha256": "7345fc90b0efba6b180ea4c570d60060e443bc7d562746e8a1512355bccba7b7"
+    },
+    {
+     "dosya": "youtube.js",
+     "sha256": "2b17532575aaa289d6e2cf07726c686bfd2aea2ac698bdd13e04d013b91146ba"
+    }
+   ],
+   "komut": "npx hyperframes@0.8.171 render + bash gif.sh",
+   "tarih": "2026-10-19",
+   "boyut": 878817
+  },
+  {
+   "dosya": "menu.gif",
+   "tur": "gif",
+   "kaynaklar": [
+    {
+     "dosya": ".vitrin/hf/menu/index.html",
+     "sha256": "1739fb085203d16aa5cc732b8b8cd7e6003fdcbf71db2df02fdf00816043a544"
+    },
+    {
+     "dosya": "player-panel.js",
+     "sha256": "2cbafbba5943abacaf9fb19528a71ae589c95ee958592d5fbf3008fbb770b796"
+    }
+   ],
+   "komut": "npx hyperframes@0.8.171 render + bash gif.sh",
+   "tarih": "2026-10-19",
+   "boyut": 893858
+  },
+  {
+   "dosya": "word-to-card.gif",
+   "tur": "gif",
+   "kaynaklar": [
+    {
+     "dosya": ".vitrin/hf/word-to-card/index.html",
+     "sha256": "3d7fd878de97060dced925268dccb8be0a5c04d65a06dab1c14ece919cd6694a"
+    },
+    {
+     "dosya": "youtube.js",
+     "sha256": "2b17532575aaa289d6e2cf07726c686bfd2aea2ac698bdd13e04d013b91146ba"
+    },
+    {
+     "dosya": "app.js",
+     "sha256": "5f7bdb14370028c0491c7caac33d785bacc327303c859caa99a2f5078d033a34"
+    }
+   ],
+   "komut": "npx hyperframes@0.8.171 render + bash gif.sh",
+   "tarih": "2026-10-19",
+   "boyut": 5152104
+  },
+  {
+   "dosya": "banner.png",
+   "tur": "png",
+   "kaynaklar": [
+    {
+     "dosya": ".vitrin/banner.html",
+     "sha256": "17c2bdbbb7ecb9b92b3c2dd1b132efeabd8dc3ca07edd66a2a877f7a7f6d30e9"
+    },
+    {
+     "dosya": ".vitrin/kayit/k11-cards.png",
+     "sha256": "c8668091bc48f1456c52554bfd18d8468e44378961bb8b8513a75e3c3095330d"
+    }
+   ],
+   "komut": "chrome --headless=new --screenshot (1280x640)",
+   "tarih": "2026-10-19",
+   "boyut": 101896
+  },
+  {
+   "dosya": "architecture.svg",
+   "tur": "svg",
+   "kaynaklar": [
+    {
+     "dosya": "youtube.js",
+     "sha256": "2b17532575aaa289d6e2cf07726c686bfd2aea2ac698bdd13e04d013b91146ba"
+    },
+    {
+     "dosya": "youtube-bridge.js",
+     "sha256": "d35b27aacacfc18c7de600120bb06b0bb9daa68c530ffeb2a9248f5353e1da2e"
+    },
+    {
+     "dosya": "captions.js",
+     "sha256": "7345fc90b0efba6b180ea4c570d60060e443bc7d562746e8a1512355bccba7b7"
+    },
+    {
+     "dosya": "player-panel.js",
+     "sha256": "2cbafbba5943abacaf9fb19528a71ae589c95ee958592d5fbf3008fbb770b796"
+    },
+    {
+     "dosya": "worker.js",
+     "sha256": "677be177867737e2cf2d30bfb49adc5b17655e21d83f8c232e805b7a361577ae"
+    }
+   ],
+   "komut": "elle yazıldı, modül adları koddan",
+   "tarih": "2026-10-19",
+   "boyut": 4254
+  },
+  {
+   "dosya": "numbers.svg",
+   "tur": "svg",
+   "kaynaklar": [
+    {
+     "dosya": "docs/media/data/bench.json",
+     "sha256": "45ac549a639071d9a618d6e27bd9e15283d0553e4aee18d59ce27d7f4d25a8d8"
+    }
+   ],
+   "komut": "bench.json değerlerinden elle yazıldı",
+   "tarih": "2026-10-19",
+   "boyut": 2347
+  },
+  {
+   "dosya": "data/bench.json",
+   "tur": "json",
+   "kaynaklar": [
+    {
+     "dosya": "captions.js",
+     "sha256": "7345fc90b0efba6b180ea4c570d60060e443bc7d562746e8a1512355bccba7b7"
+    }
+   ],
+   "komut": "node bench (2026-10-18, node v24.18.0)",
+   "tarih": "2026-10-19",
+   "boyut": 256
+  }
+ ]
+}

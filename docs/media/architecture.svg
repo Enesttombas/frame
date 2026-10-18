@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Frame architecture: YouTube page scripts, extension worker, local tray app and optional local model</title>
+  <defs>
+    <marker id="ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#d4e3aa"/></marker>
+  </defs>
+  <rect width="960" height="540" rx="18" fill="#203a35"/>
+  <text x="40" y="58" font-family="Georgia, serif" font-size="30" fill="#f3efe3">How Frame is wired</text>
+  <rect x="40" y="70" width="176" height="10" rx="3" fill="#d4e3aa" opacity="0.45"/>
+
+  <!-- YouTube sekmesi -->
+  <rect x="32" y="104" width="560" height="260" rx="14" fill="none" stroke="#5f7a6f" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="50" y="128" font-size="13" fill="#9fb3a8" letter-spacing="1">YOUTUBE TAB · www.youtube.com/watch</text>
+
+  <g font-size="14">
+    <rect x="52" y="146" width="240" height="78" rx="10" fill="#2b4a43" stroke="#d4e3aa" stroke-width="2"/>
+    <text x="68" y="174" font-size="16" font-weight="600" fill="#f3efe3">youtube-bridge.js</text>
+    <text x="68" y="196" fill="#c9d3bf">page world: catches the player's</text>
+    <text x="68" y="214" fill="#c9d3bf">timed-text (JSON3) responses</text>
+
+    <rect x="332" y="146" width="240" height="78" rx="10" fill="#2b4a43" stroke="#d4e3aa" stroke-width="2"/>
+    <text x="348" y="174" font-size="16" font-weight="600" fill="#f3efe3">youtube.js</text>
+    <text x="348" y="196" fill="#c9d3bf">f. button, EN/TR caption layer,</text>
+    <text x="348" y="214" fill="#c9d3bf">word picker, save card</text>
+
+    <rect x="52" y="264" width="240" height="78" rx="10" fill="#2b4a43" stroke="#5f7a6f" stroke-width="1.5"/>
+    <text x="68" y="292" font-size="16" font-weight="600" fill="#f3efe3">captions.js</text>
+    <text x="68" y="314" fill="#c9d3bf">parseJson3 → cues, at(t) lookup</text>
+
+    <rect x="332" y="264" width="240" height="78" rx="10" fill="#2b4a43" stroke="#5f7a6f" stroke-width="1.5"/>
+    <text x="348" y="292" font-size="16" font-weight="600" fill="#f3efe3">player-panel.js</text>
+    <text x="348" y="314" fill="#c9d3bf">Shadow DOM panel: Captions,</text>
+    <text x="348" y="332" fill="#c9d3bf">Learn, Transcript, AI tabs</text>
+
+    <rect x="652" y="146" width="270" height="96" rx="10" fill="#2b4a43" stroke="#d4e3aa" stroke-width="2"/>
+    <text x="668" y="174" font-size="16" font-weight="600" fill="#f3efe3">worker.js</text>
+    <text x="668" y="196" fill="#c9d3bf">extension service worker:</text>
+    <text x="668" y="214" fill="#c9d3bf">cards in chrome.storage.local,</text>
+    <text x="668" y="232" fill="#c9d3bf">tray state, opens the library</text>
+
+    <rect x="652" y="300" width="270" height="78" rx="10" fill="#f3efe3"/>
+    <text x="668" y="328" font-size="16" font-weight="700" fill="#203a35">Frame.exe (tray)</text>
+    <text x="668" y="350" fill="#3d5a50">127.0.0.1:8767 /state · tools on/off</text>
+
+    <rect x="52" y="420" width="400" height="78" rx="10" fill="#2b4a43" stroke="#5f7a6f" stroke-width="1.5"/>
+    <text x="68" y="448" font-size="16" font-weight="600" fill="#f3efe3">index.html + app.js</text>
+    <text x="68" y="470" fill="#c9d3bf">card library and cloze review, also a demo lesson</text>
+
+    <rect x="652" y="420" width="270" height="78" rx="10" fill="none" stroke="#9fb3a8" stroke-width="1.5" stroke-dasharray="5 5"/>
+    <text x="668" y="448" font-size="16" font-weight="600" fill="#f3efe3">Ollama (optional)</text>
+    <text x="668" y="470" fill="#c9d3bf">127.0.0.1:11434 · explain a word</text>
+  </g>
+
+  <g stroke="#d4e3aa" stroke-width="2" fill="none" marker-end="url(#ok)">
+    <path d="M292 185 H326"/>
+    <path d="M412 224 V258"/>
+    <path d="M292 303 Q312 303 312 260 Q312 238 330 232" />
+    <path d="M572 185 H646"/>
+    <path d="M787 242 V294"/>
+    <path d="M652 222 Q560 400 458 452"/>
+    <path d="M787 378 V414" stroke-dasharray="5 5"/>
+  </g>
+  <g font-size="12" fill="#d4e3aa">
+    <text x="586" y="176">messages</text>
+    <text x="796" y="274">fetch</text>
+    <text x="540" y="372">OPEN_APP</text>
+    <text x="796" y="402">only if allowed</text>
+  </g>
+</svg>

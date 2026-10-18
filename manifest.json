@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "Frame — Kişisel Video Öğrenme",
+  "version": "0.1.5",
+  "description": "Frame masaüstü uygulaması açıkken YouTube üzerinde cümle tekrarı ve bağlamlı kelime kartları.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8767/*"
+  ],
+  "optional_host_permissions": [
+    "http://127.0.0.1:11434/*"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "action": {
+    "default_title": "Frame uygulamasını aç"
+  },
+  "options_page": "settings.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["captions.js", "youtube-bridge.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "captions.js",
+        "preferences.js",
+        "player-panel.js",
+        "youtube.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqj8D06Ze1023iXeJSSUMjmtv/SWDdXms7rJuI5piCS3xV4YeVXuXgpOvZ7mkgR11+KHs02/WLIosFXOLmIrqJT9n5c8/2R6hPe70MLWfCcde9KeTi0mcSBKlssSOywcYnWhOVZZeRB3bHHT28dI38+7J2fcXzIJQXRIO+bzTRiaE8CnbIVYB+sPDpzRrcly/Z1ZPeLOB39OCA52f01ewnxjUXCDV3icUYusu6PngitOzinxKZm2XdQq53AgxqDkauilL8xDlF0Q9Hsg2gSPvIY71rRJOPBIblzETHtRmSs39y/SKF4fnANWROBfnxOMFPZ8KzwMTvAJDNyPtT+IZsQIDAQAB"
+}

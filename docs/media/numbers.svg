@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Frame measured numbers: caption parse time, cue lookup time, extension size, tray app size</title>
+  <rect width="960" height="300" rx="18" fill="#f3efe3"/>
+  <text x="40" y="54" font-family="Georgia, serif" font-size="28" fill="#203a35">Measured, not guessed</text>
+  <rect x="40" y="64" width="150" height="9" rx="3" fill="#d4e3aa"/>
+  <text x="920" y="54" text-anchor="end" font-size="13" fill="#5f7a6f">node v24.18.0 · 2026-10-18 · docs/media/data/bench.json</text>
+
+  <g>
+    <rect x="40" y="100" width="200" height="160" rx="12" fill="#203a35"/>
+    <text x="60" y="130" font-size="13" fill="#9fb3a8" letter-spacing="1">PARSE 1200 CUES</text>
+    <text x="60" y="190" font-family="Georgia, serif" font-size="52" fill="#f3efe3">1.08</text>
+    <text x="60" y="218" font-size="16" fill="#d4e3aa">ms median</text>
+    <text x="60" y="242" font-size="13" fill="#9fb3a8">p95 1.55 ms</text>
+
+    <rect x="260" y="100" width="200" height="160" rx="12" fill="#203a35"/>
+    <text x="280" y="130" font-size="13" fill="#9fb3a8" letter-spacing="1">CUE AT TIME t</text>
+    <text x="280" y="190" font-family="Georgia, serif" font-size="52" fill="#f3efe3">1.7</text>
+    <text x="280" y="218" font-size="16" fill="#d4e3aa">µs p95</text>
+    <text x="280" y="242" font-size="13" fill="#9fb3a8">p50 0.3 µs · 20 000 runs</text>
+
+    <rect x="480" y="100" width="200" height="160" rx="12" fill="#203a35"/>
+    <text x="500" y="130" font-size="13" fill="#9fb3a8" letter-spacing="1">WHOLE EXTENSION</text>
+    <text x="500" y="190" font-family="Georgia, serif" font-size="52" fill="#f3efe3">78.9</text>
+    <text x="500" y="218" font-size="16" fill="#d4e3aa">KB</text>
+    <text x="500" y="242" font-size="13" fill="#9fb3a8">10 files, no dependencies</text>
+
+    <rect x="700" y="100" width="220" height="160" rx="12" fill="#203a35"/>
+    <text x="720" y="130" font-size="13" fill="#9fb3a8" letter-spacing="1">TRAY APP</text>
+    <text x="720" y="190" font-family="Georgia, serif" font-size="52" fill="#f3efe3">10.5</text>
+    <text x="720" y="218" font-size="16" fill="#d4e3aa">KB Frame.exe</text>
+    <text x="720" y="242" font-size="13" fill="#9fb3a8">.NET Framework, no installer</text>
+  </g>
+</svg>

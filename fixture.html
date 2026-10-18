@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frame YouTube adaptörü — yerel test düzeneği</title>
+<style>
+body{background:#111;color:#fff;font:16px Segoe UI;margin:30px 40px}h1{font-size:24px}p{font-size:13px;color:#c4d2ba}#movie_player{position:relative;max-width:1100px;aspect-ratio:16/9;background:#203a35}video{width:100%;height:100%;display:block}.ytp-caption-window-container{position:absolute;bottom:65px;left:25px;background:#111d;padding:9px}.ytp-chrome-bottom{position:absolute;bottom:0;left:0;right:0;height:52px;background:linear-gradient(transparent,#000c);display:flex;align-items:center;justify-content:space-between;padding:0 12px;box-sizing:border-box}.ytp-right-controls{display:flex;height:40px;align-items:center;gap:6px}.ytp-button{color:white;font:16px Segoe UI;padding:0 8px;background:transparent;border:0;height:40px;cursor:pointer}.ytp-time-display{font-size:12px}.ytp-progress{position:absolute;top:0;left:12px;right:12px;height:3px;background:#ffffff50}.ytp-progress:before{content:'';display:block;width:28%;height:100%;background:#ef4d67}#result{color:#d4e3aa;max-width:1100px;overflow-wrap:anywhere}#test-tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}#test-tools button{background:#203a35;border:1px solid #83987666;border-radius:5px;color:#fff;padding:8px;cursor:pointer}
+</style></head>
+<body>
+<h1>YouTube adaptörü: yerel test düzeneği</h1>
+<p>Bu sayfa YouTube değildir. Aynı adaptör, video ve altyazı DOM şekliyle sınanır.</p>
+<div id="movie_player">
+  <video src="media/lesson.mp4"></video>
+  <div class="ytp-caption-window-container" hidden><span class="ytp-caption-segment">YOUTUBE YERLİ ALTYAZISI — FRAME BU METNİ KULLANMAMALI</span></div>
+  <div class="ytp-chrome-bottom"><div class="ytp-progress"></div><div><button class="ytp-button" id="fixture-play" aria-label="Test videosunu oynat">▶</button><span class="ytp-time-display">0:00 / 0:39</span></div><div class="ytp-right-controls"><button class="ytp-button ytp-subtitles-button" aria-label="Altyazılar" aria-pressed="false">CC kapalı</button><button class="ytp-button" aria-label="Test oynatıcısını tam ekran yap" id="fixture-fullscreen">⛶</button></div></div>
+</div>
+<div id="test-tools"><button id="fixture-app">Tepsi bağlantısını kapat</button><button id="fixture-controls">Kontrol çubuğunu kaldır</button><button id="fixture-seek">0:20'ye git</button><button id="fixture-gap">Altyazı boşluğuna git</button><button id="fixture-no-captions">Altyazısız video durumu</button></div>
+<p id="result">Henüz kart kaydedilmedi.</p>
+<script src="lesson.js"></script><script src="timings.js"></script><script src="captions.js"></script><script src="preferences.js"></script><script src="fixture.js"></script><script src="player-panel.js"></script><script src="youtube.js"></script>
+</body></html>
