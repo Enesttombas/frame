@@ -30,6 +30,8 @@ Frame puts English and Turkish captions on any YouTube video and turns a tapped 
 
 <img src="docs/media/numbers.svg" alt="Parse 1200 cues 1.08 ms median, lookup 1.7 µs p95, extension 78.9 KB, tray app 10.5 KB" width="100%">
 
+Measured with `node bench/frame-bench.cjs` on 2026-10-18 (Node v24.18.0): 1,200 caption cues, 20,000 lookups. Raw data: [`docs/media/data/bench.json`](docs/media/data/bench.json).
+
 ## Quick start
 
 1. Build and start the tray app: `powershell -File build-desktop.ps1`, then run `Frame.exe`. It sits in the system tray, no console.
@@ -61,3 +63,7 @@ node worker-check.cjs
 ```
 
 `worker-check.cjs` needs the tray app running. Detailed test notes: [QA.md](QA.md), development notes: [docs/NOTES.md](docs/NOTES.md).
+
+## License
+
+[MIT](LICENSE).

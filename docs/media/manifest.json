@@ -77,9 +77,9 @@
      "sha256": "5f7bdb14370028c0491c7caac33d785bacc327303c859caa99a2f5078d033a34"
     }
    ],
-   "komut": "npx hyperframes@0.8.171 render + bash gif.sh",
-   "tarih": "2026-10-19",
-   "boyut": 5152104
+   "komut": "npx hyperframes@0.8.171 render + bash gif.sh; 2026-10-22 ffmpeg fps=12 max_colors=80 (<=5 MB)",
+   "tarih": "2026-10-22",
+   "boyut": 4876861
   },
   {
    "dosya": "banner.png",

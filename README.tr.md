@@ -30,6 +30,8 @@ Frame, YouTube videolarına İngilizce ve Türkçe altyazı ekler; dokunduğun k
 
 <img src="docs/media/numbers.svg" alt="1200 satır ayrıştırma medyan 1,08 ms, arama p95 1,7 µs, eklenti 78,9 KB, tepsi uygulaması 10,5 KB" width="100%">
 
+`node bench/frame-bench.cjs` ile 2026-10-18'de ölçüldü (Node v24.18.0): 1.200 altyazı satırı, 20.000 arama. Ham veri: [`docs/media/data/bench.json`](docs/media/data/bench.json).
+
 ## Hızlı başlangıç
 
 1. Tepsi uygulamasını derle ve başlat: `powershell -File build-desktop.ps1`, sonra `Frame.exe`. Konsol açmaz, sistem tepsisinde durur.
@@ -61,3 +63,7 @@ node worker-check.cjs
 ```
 
 `worker-check.cjs` tepsi uygulaması açıkken çalışır. Test ayrıntısı: [QA.md](QA.md), geliştirme notları: [docs/NOTES.md](docs/NOTES.md).
+
+## Lisans
+
+[MIT](LICENSE).
